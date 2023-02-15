@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
-              height: 180.0,
+              height: 80.0,
               // child: Image.asset('assets/images/logo.png'),
             ),
             TextField(

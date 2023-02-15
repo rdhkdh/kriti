@@ -61,7 +61,7 @@ class _menuState extends State<menu> {
           ),
           SizedBox(
             width: 200.0,
-            height: 380.0,
+            height: 300.0,
           ),
           Container(
             child: Center(child: Text('Cart items: ${count}')),

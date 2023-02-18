@@ -23,7 +23,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Campus Catalogue'),
+        title: Text('MarketMate'),
       ),
       backgroundColor: Colors.white,
       body: Padding(

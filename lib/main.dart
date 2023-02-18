@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:kriti/screens/cart_screen.dart';
 import 'package:kriti/screens/home_screen.dart';
 import 'package:kriti/screens/login_sreen.dart';
 import 'package:kriti/screens/menu.dart';
 import 'package:kriti/screens/registration_screen.dart';
+import 'package:kriti/screens/restaurant.dart';
 import 'package:kriti/screens/welcome_screen.dart';
 
 void main() {
@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: WelcomeScreen.id,
       routes: {
+        RestaurantScreen.id: (context)=> RestaurantScreen(),
         WelcomeScreen.id: (context)=> WelcomeScreen(),
         LoginScreen.id: (context)=> LoginScreen(),
         RegistrationScreen.id: (context)=> RegistrationScreen(),

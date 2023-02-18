@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kriti/assets/menu_list.dart';
 import 'package:kriti/screens/cart_screen.dart';
 
 class menu extends StatefulWidget {
@@ -10,12 +11,10 @@ class menu extends StatefulWidget {
 
 class _menuState extends State<menu> {
   int count=0;
-  int c1=0,c2=0,c3=0;
-
-
+  late Map<String, int> cart_items= {'Sandwich': 0, 'Noodles': 0, 'Pizza': 0};
+  Map<String, int> menu= MenuList.menu_list;
   @override
   Widget build(BuildContext context) {
-    late Map<String, int> cart_items= {'Sandwich': c1*30, 'Noodles': c2*50, 'Pizza': c3*200};
     return Scaffold(
       appBar: AppBar(
         title: Center(child: const Text(' _Restaurant name_ Menu')),
@@ -23,42 +22,28 @@ class _menuState extends State<menu> {
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListTile( //use onTap method for click functionality
-              title: Text('Sandwich'),
-              tileColor: Colors.greenAccent,
-              subtitle: Text('Price: Rs30'),
-              onTap: () {
-                setState(() {count++;});
-                setState(() {c1++;});
-              },
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListTile(
-              title: Text('Noodles'),
-              tileColor: Colors.greenAccent,
-              subtitle: Text('Price: Rs50'),
-              onTap: () {
-                setState(() {count++;});
-                setState(() {c2++;});
-              },
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListTile(
-              title: Text('Pizza'),
-              tileColor: Colors.greenAccent,
-              subtitle: Text('Price: Rs200'),
-              onTap: () {
-                setState(() {count++;});
-                setState(() {c3++;});
-              },
-            ),
-          ),
+          ListView.builder(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              itemCount: menu.length,
+              itemBuilder:(BuildContext context, int index){
+                String key = menu.keys.elementAt(index);
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: new ListTile( //use onTap method for click functionality
+                    title: Text('$key'),
+                    tileColor: Colors.greenAccent,
+                    subtitle: Text('Price: Rs${menu[key]}'),
+                    onTap: () {
+                      setState(() {count++;});
+                      setState(() {
+                        int price=(menu[key]) ?? 0;
+                        cart_items[key]=((cart_items[key]??0)+((price)??0));
+                      });
+                    },
+                  ),
+                );
+              }),
           SizedBox(
             width: 200.0,
             height: 300.0,
@@ -75,10 +60,10 @@ class _menuState extends State<menu> {
       floatingActionButton: FloatingActionButton(
         onPressed: ()
         {
-          cart_items.forEach((i,j){
-            print(i);
-            print(j);
-          });
+          // cart_items.forEach((i,j){
+          //   print(i);
+          //   print(j);
+          // });
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => CartScreen(item: cart_items)),

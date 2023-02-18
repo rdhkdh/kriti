@@ -11,7 +11,7 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
-  // Map<String,int> item={'Pizza':200,'Burger':300};
+
   @override
   Widget build(BuildContext context) {
     num total=0;
@@ -65,7 +65,7 @@ class _CartScreenState extends State<CartScreen> {
                 MaterialPageRoute(builder: (context) => QR()),
               );
             },
-            child: Text("Pace Order"),
+            child: Text("Place Order"),
           ),
         ],
       ),

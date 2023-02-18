@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:kriti/screens/restaurant.dart';
+import 'package:kriti/screens/restaurants.dart';
 import 'home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Campus Catalogue'),
+        title: Text('MarketMate'),
       ),
       backgroundColor: Colors.white,
       body: Padding(
@@ -123,7 +124,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       final user = await _auth.signInWithEmailAndPassword(
                           email: email, password: password);
                       if (user != null) {
-                        Navigator.pushNamed(context, RestaurantScreen.id);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => RestaurantScreen()),
+                          );
                       }
                     }catch(e){
                       print(e);

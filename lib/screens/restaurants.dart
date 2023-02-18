@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'menu.dart';
+import '../menus/blueline.dart';
+import '../menus/ccd.dart';
+import '../menus/florentine.dart';
+import '../menus/foodies.dart';
+import '../menus/spectrum_south.dart';
 
 class restaurants extends StatelessWidget {
   const restaurants({Key? key}) : super(key: key);
@@ -17,13 +21,13 @@ class restaurants extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
                 leading: const Icon(Icons.coffee),
-                title: Text('Roasted Pot'),
+                title: Text('Spectrum South hub '),
                 tileColor: Colors.purple[200],
                 subtitle: Text( 'Status: open/closed' ),
               onTap: (){
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => menu()),
+                  MaterialPageRoute(builder: (context) => menu_1()),
                 );
               },
             ),
@@ -32,27 +36,45 @@ class restaurants extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
                 leading: const Icon(Icons.coffee),
-                title: Text('Core 1 Canteen'),
+                title: Text('Foodie\'s World'),
                 tileColor: Colors.purple[200],
-                subtitle: Text( 'Status: open/closed' )
+                subtitle: Text( 'Status: open/closed' ),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => menu_2()),
+                );
+              },
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
                 leading: const Icon(Icons.coffee),
-                title: Text('Hashtag'),
+                title: Text('Cafe Coffee Day'),
                 tileColor: Colors.purple[200],
-                subtitle: Text( 'Status: open/closed' )
+                subtitle: Text( 'Status: open/closed' ),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => menu_3()),
+                );
+              },
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
                 leading: const Icon(Icons.coffee),
-                title: Text('Brahma canteen'),
+                title: Text('Blue Line Restaurant'),
                 tileColor: Colors.purple[200],
-                subtitle: Text( 'Status: open/closed' )
+                subtitle: Text( 'Status: open/closed' ),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => menu_4()),
+                );
+              },
             ),
           ),
           Padding(
@@ -61,7 +83,13 @@ class restaurants extends StatelessWidget {
                 leading: const Icon(Icons.coffee),
                 title: Text('Florentine'),
                 tileColor: Colors.purple[200],
-                subtitle: Text( 'Status: open/closed' )
+                subtitle: Text( 'Status: open/closed' ),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => menu_5()),
+                );
+              },
             ),
           ),
         ],

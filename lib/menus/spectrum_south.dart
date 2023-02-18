@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:kriti/assets/menu_list.dart';
 import 'package:kriti/screens/cart_screen.dart';
 
-class menu extends StatefulWidget {
-  menu({Key? key}) : super(key: key);
-  static String id="menu";
+class menu_1 extends StatefulWidget {
+  menu_1({Key? key}) : super(key: key);
+  static String id="menu_1";
   @override
-  State<menu> createState() => _menuState();
+  State<menu_1> createState() => _menuState();
 }
 
-class _menuState extends State<menu> {
+class _menuState extends State<menu_1> {
   int count=0;
-  late Map<String, int> cart_items= {'Sandwich': 0, 'Noodles': 0, 'Pizza': 0};
-  Map<String, int> menu= MenuList.menu_list;
+  late Map<String, int> cart_items= {'Sambhar Idli': 0, 'Sambhar Vada ': 0, 'Masala Dosa': 0};
+  Map<String, int> menu= MenuList.menu_list_1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +46,7 @@ class _menuState extends State<menu> {
               }),
           SizedBox(
             width: 200.0,
-            height: 300.0,
+            height: 8.0,
           ),
           Container(
             child: Center(child: Text('Cart items: ${count}')),

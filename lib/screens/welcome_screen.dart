@@ -46,7 +46,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       fontWeight: FontWeight.w900,
                     ),
                     child: AnimatedTextKit(
-                      animatedTexts: [TyperAnimatedText(' Kriti')],
+                      animatedTexts: [TyperAnimatedText('MarketMate')],
                       // textStyle: TextStyle(
                       //   fontSize: 45.0,
                       //   fontWeight: FontWeight.w900,

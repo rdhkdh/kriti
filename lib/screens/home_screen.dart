@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(8.0)),
                     child: Image.asset(
-                      'lib/assets/restaurant_img.png',
+                      'lib/assets/restaurants.jpeg',
                       width: 250,
                       height: 150,
                       fit:BoxFit.fill,
@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(8.0)),
                     child: Image.asset(
-                        'lib/assets/Stationery_Items_1024x1024.webp',
+                        'lib/assets/stationaries.jpeg',
                         width: 300,
                         height: 150,
                         fit:BoxFit.fill
@@ -98,7 +98,7 @@ class HomeScreen extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(8.0)),
                     child: Image.asset(
-                        'lib/assets/istockphoto-1214244666-170667a.jpg',
+                        'lib/assets/essentials.jpeg',
                         width: 300,
                         height: 150,
                         fit:BoxFit.fill

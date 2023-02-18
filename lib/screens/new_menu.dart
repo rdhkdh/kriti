@@ -11,8 +11,7 @@ class new_menu extends StatefulWidget {
 
 class _menuState extends State<new_menu> {
   int count=0;
-  // late Map<String, int> cart_items= {'Sandwich': 0, 'Noodles': 0, 'Pizza': 0};
-  Map<String, int> menu= MenuList.menu_list;
+  Map<String, int> menu= MenuList.menu_list_1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

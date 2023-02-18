@@ -1,95 +1,104 @@
 import 'package:flutter/material.dart';
-import 'edit.dart';
+import 'package:kriti/edit_menu/edit_1.dart';
+import 'package:kriti/edit_menu/edit_2.dart';
+import 'package:kriti/edit_menu/edit_3.dart';
+import 'package:kriti/edit_menu/edit_4.dart';
+import 'package:kriti/edit_menu/edit_5.dart';
+import '../menus/blueline.dart';
+import '../menus/ccd.dart';
+import '../menus/florentine.dart';
+import '../menus/foodies.dart';
+import '../menus/spectrum_south.dart';
 
-class RestaurantScreen extends StatefulWidget {
-  RestaurantScreen({Key? key}) : super(key: key);
-  static String id="restaurant_orders";
-  @override
-  State<RestaurantScreen> createState() => _RestaurantScreenState();
-}
-
-class _RestaurantScreenState extends State<RestaurantScreen> {
-  int count=0;
-  int c1=0,c2=0,c3=0;
-
+class RestaurantScreen extends StatelessWidget {
+  const RestaurantScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    late Map<String, int> order_received= {'Sandwich': c1*30, 'Noodles': c2*50, 'Pizza': c3*200};
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('Orders Received')),
+        title: Center(child: const Text('Restaurants')),
         backgroundColor: Colors.lightBlueAccent[100],
       ),
-      body: Column(
+      body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: ListTile( //use onTap method for click functionality
-              title: Text('Sandwich'),
-              tileColor: Colors.greenAccent,
-              subtitle: Text('quantity: 2'),
-              onTap: () {
-                setState(() {count++;});
-                setState(() {c1++;});
+            child: ListTile(
+              leading: const Icon(Icons.coffee),
+              title: Text('Spectrum South hub '),
+              tileColor: Colors.purple[200],
+              subtitle: Text( 'Status: open/closed' ),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  MyCustomForm1()),
+                );
               },
-              // trailing: MaterialButton(
-              //   onPressed: () => print('select'),
-              //   child: Text('Approve',),
-              //   color: Colors.amberAccent
-              // ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              title: Text('Noodles'),
-              tileColor: Colors.greenAccent,
-              subtitle: Text('quantity: 2'),
-              onTap: () {
-                setState(() {count++;});
-                setState(() {c2++;});
+              leading: const Icon(Icons.coffee),
+              title: Text('Foodie\'s World'),
+              tileColor: Colors.purple[200],
+              subtitle: Text( 'Status: open/closed' ),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyCustomForm2()),
+                );
               },
-             //  trailing: MaterialButton(
-             //   onPressed: () => print('select'),
-             //   child: Text('Approve',),
-             //   color: Colors.amberAccent
-             // ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListTile(
-              title: Text('Pizza'),
-              tileColor: Colors.greenAccent,
-              subtitle: Text('quantity: 2'),
-              onTap: () {
-                setState(() {count++;});
-                setState(() {c3++;});
+              leading: const Icon(Icons.coffee),
+              title: Text('Cafe Coffee Day'),
+              tileColor: Colors.purple[200],
+              subtitle: Text( 'Status: open/closed' ),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyCustomForm3()),
+                );
               },
-             //  trailing: MaterialButton(
-             //   onPressed: () => print('select'),
-             //   child: Text('Approve',),
-             //   color: Colors.amberAccent
-             // ),
             ),
           ),
-          Expanded(child: SizedBox(
-            width: 200.0,
-            height: 300.0,
-          )),
-
-          Expanded(child: ElevatedButton(
-            onPressed: ()
-            {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MyCustomForm()),
-              );
-            },
-            child: Text("Edit menu"),
-          )),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListTile(
+              leading: const Icon(Icons.coffee),
+              title: Text('Blue Line Restaurant'),
+              tileColor: Colors.purple[200],
+              subtitle: Text( 'Status: open/closed' ),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyCustomForm4()),
+                );
+              },
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListTile(
+              leading: const Icon(Icons.coffee),
+              title: Text('Florentine'),
+              tileColor: Colors.purple[200],
+              subtitle: Text( 'Status: open/closed' ),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyCustomForm5()),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
   }
 }
+

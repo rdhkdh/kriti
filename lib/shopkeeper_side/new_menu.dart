@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../assets/menu_list.dart';
+import '../utils/menu_list.dart';
 
 class new_menu extends StatefulWidget {
   final String item;

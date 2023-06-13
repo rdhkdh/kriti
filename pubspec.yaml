@@ -20,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.0-255.2.beta <3.0.0'
+  sdk: '>=2.18.2 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -49,6 +49,11 @@ dependencies:
   path_provider: ^2.0.10
   permission_handler: ^10.2.0
   url_launcher: ^6.1.9
+  sqflite: ^2.2.8+4
+  badges: ^3.1.1
+  provider: ^6.0.5
+  flutter_polyline_points: ^1.0.0
+  google_maps_flutter: ^2.2.6
 
 dev_dependencies:
   flutter_test:
@@ -74,9 +79,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - lib/assets/essentials.jpeg
-     - lib/assets/restaurants.jpeg
-     - lib/assets/stationaries.jpeg
+     - lib/assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

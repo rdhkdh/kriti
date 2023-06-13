@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../assets/menu_list.dart';
-import '../screens/new_menu.dart';
+import '../utils/menu_list.dart';
+import '../shopkeeper_side/new_menu.dart';
 
 class MyCustomForm2 extends StatefulWidget {
   @override

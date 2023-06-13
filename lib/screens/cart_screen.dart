@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:kriti/main.dart';
+import 'package:kriti/screens/payment_gateway.dart';
 import 'package:kriti/screens/qr_pg.dart';
 
 class CartScreen extends StatefulWidget {
   static String id='cart_screen';
-  CartScreen({Key? key,required this.item}) : super(key: key);
+  CartScreen({Key? key, required this.item}) : super(key: key);
   final Map<String, dynamic> item;
   @override
   State<CartScreen> createState() => _CartScreenState();
@@ -19,8 +20,10 @@ class _CartScreenState extends State<CartScreen> {
       total=total+k;
     }
     return Scaffold(
+      backgroundColor: Colors.black26,
       appBar: AppBar(
-        title: Text('My Cart'),
+        title: Text('My Cart',style: TextStyle(color: Colors.black),),
+        backgroundColor: Colors.amber[700],
       ),
       body: Column(
         children: [
@@ -30,13 +33,17 @@ class _CartScreenState extends State<CartScreen> {
               itemCount: (widget.item).length,
               itemBuilder:(BuildContext context, int index){
                 String key = (widget.item).keys.elementAt(index);
-                return new Column(
+                return Column(
                   children: <Widget>[
-                    new ListTile(
-                      title: new Text("$key"),
-                      subtitle: new Text("${(widget.item)[key]}"),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListTile(
+                        title: Text("$key"),
+                        subtitle: Text("${(widget.item)[key]}"),
+                        tileColor: Colors.green[800],
+                      ),
                     ),
-                    new Divider(
+                    const Divider(
                       height: 2.0,
                     ),
                   ],
@@ -49,8 +56,8 @@ class _CartScreenState extends State<CartScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text("Total price"),
-                Text("${total}"),
+                Text("Total price", style: TextStyle(color: Colors.white) ),
+                Text("${total}", style: TextStyle(color: Colors.white)),
               ],
             ),
           ),
@@ -58,14 +65,17 @@ class _CartScreenState extends State<CartScreen> {
             height: 8.0,
           ),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red, // Background color
+            ),
             onPressed: ()
             {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => QR()),
+                MaterialPageRoute(builder: (context) => payment(title: 'Payment for Order', total: total)),
               );
             },
-            child: Text("Place Order"),
+            child: Text("Pay and Place Order", style: TextStyle(color: Colors.white)),
           ),
         ],
       ),

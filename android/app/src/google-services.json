@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "624102486965",
+    "project_id": "campus-catalogue-521ec",
+    "storage_bucket": "campus-catalogue-521ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624102486965:android:5ef52e9f34ae308967dffc",
+        "android_client_info": {
+          "package_name": "com.example.kriti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624102486965-fqrdgu9v8gnpdl7vijofla7kuvc9h75d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_AJR6N8G8Diz05iXNY_Mz8LBkcIywlM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624102486965-fqrdgu9v8gnpdl7vijofla7kuvc9h75d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

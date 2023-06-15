@@ -6,6 +6,7 @@ class side_menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.amber[200],
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -20,15 +21,34 @@ class side_menu extends StatelessWidget {
               ),
             ),
             decoration: BoxDecoration(
-              color: Colors.lightBlueAccent[100],
+              color: Colors.lightGreenAccent,
               image: DecorationImage(
                 image: NetworkImage('https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGlsbHN8ZW58MHx8MHx8&w=1000&q=80',
                 ),
                 fit: BoxFit.cover,
               ),
             ),
-          )
-          
+          ),
+          ListTile(
+            leading: Icon(Icons.location_on_outlined),
+            title: Text('Find restaurants'), //google maps
+            onTap: () => {},
+          ),
+          ListTile(
+            leading: Icon(Icons.star_border),
+            title: Text('Recommendations'), // put palates recommendations
+            onTap: () => {},
+          ),
+          ListTile(
+            leading: Icon(Icons.newspaper_outlined),
+            title: Text('What\'s more'), // blogs about iitg here
+            onTap: () => {},
+          ),
+          ListTile(
+            leading: Icon(Icons.code),
+            title: Text('About the developer'), // give link to github here
+            onTap: () => {},
+          ),
         ],
       ),
     );

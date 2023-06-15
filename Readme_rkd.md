@@ -39,9 +39,14 @@ editing menu and timings of the shop is provided.
 
 ## Snapshots
 <p float="left">
-  <img src="/img1.png" width="100" />
-  <img src="/img2.png" width="100" /> 
-  <img src="/img3.png" width="100" />
+  <img src="welcome_pg.jpg" width="27%" />
+  <img src="home_pg.jpg" width="27%" /> 
+  <img src="cart.jpg" width="27%" />
+</p>  
+<p float="left">
+  <img src="razorpay.jpg" width="27%" />
+  <img src="payment.jpg" width="27%" /> 
+  <img src="qr.jpg" width="27%" />
 </p>
 
 ## Impending Enhancements:
